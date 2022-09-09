@@ -1,0 +1,27 @@
+/* COLOR PALETTE: https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background: #264653;
+    color: #E9C46A;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.drink-info ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+#drinkLabel {
+    color: #E76F51;
+    font-weight: 700;
+}

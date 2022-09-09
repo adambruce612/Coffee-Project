@@ -3,6 +3,7 @@ let description = document.getElementById('description');
 let hot = document.getElementById('hot');
 let cold = document.getElementById('cold');
 let drink = document.getElementById('drinks').value;
+const descriptionLabel = "Description:";
 
 let latte = {
     description: "Latte's are a coffee beverage made with espresso and steamed milk.",
@@ -19,7 +20,7 @@ let breve = {
 }
 
 if (drink === "latte") {
-    description.textContent = latte.description;
+    description.textContent = descriptionLabel + " " + latte.description;
     hot.textContent = latte.hot;
     cold.textContent = latte.cold;
 }
