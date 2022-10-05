@@ -4,6 +4,7 @@ let hot = document.getElementById('hot');
 let cold = document.getElementById('cold');
 let drinks = document.getElementById('drinks');
 const descriptionLabel = "Description:";
+let btn = document.getElementById('btn');
 
 let latte = {
     description: "A type of coffee made with espresso and hot steamed milk, milkier than a cappuccino. (Google Oxford Language Definition)",
@@ -29,11 +30,22 @@ let redEye = {
     iced: "An iced red eye will be the made the same way as hot with cold brew substituted for the drip coffe and ice added."
 }
 
-drinks.addEventListener('change', console.log(drinks));
+drinks.addEventListener('change', function() {
+    let drink = drinks.value;
+    console.log(drink);
+    if (drink === "latte") {
+        displayContent(latte);        
+    } else if (drink === "cappucino") {
+        displayContent(cappucino)
+    } else if (drink === "breve") {
+        displayContent(breve);
+    } else if (drink === "redEye") {
+        displayContent(redEye)
+    }
+});
 
 function selectedDrink(value) {
     let drink = drinks.value;
-    console.log(drink);
     if (drink === "latte") {
         displayContent(latte);        
     } else if (drink === "cappucino") {
@@ -46,8 +58,10 @@ function selectedDrink(value) {
 };
 
 
+
 function displayContent(drink) {
     description.textContent = descriptionLabel + " " + drink.description;
     hot.textContent = drink.hot;
     cold.textContent = drink.cold;
 }
+
