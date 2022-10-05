@@ -1,4 +1,5 @@
 const drinkInfo = document.querySelector('#drink-info');
+let drinkDiagram = document.getElementById('drink-diagram');
 let description = document.getElementById('description');
 let hot = document.getElementById('hot');
 let cold = document.getElementById('cold');
@@ -33,6 +34,7 @@ let redEye = {
 drinks.addEventListener('change', function() {
     let drink = drinks.value;
     console.log(drink);
+    drinkDiagram.style.display = "block";
     if (drink === "latte") {
         displayContent(latte);        
     } else if (drink === "cappucino") {
@@ -41,23 +43,8 @@ drinks.addEventListener('change', function() {
         displayContent(breve);
     } else if (drink === "redEye") {
         displayContent(redEye)
-    }
+    } 
 });
-
-function selectedDrink(value) {
-    let drink = drinks.value;
-    if (drink === "latte") {
-        displayContent(latte);        
-    } else if (drink === "cappucino") {
-        displayContent(cappucino)
-    } else if (drink === "breve") {
-        displayContent(breve);
-    } else if (drink === "redEye") {
-        displayContent(redEye)
-    }
-};
-
-
 
 function displayContent(drink) {
     description.textContent = descriptionLabel + " " + drink.description;

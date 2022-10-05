@@ -25,3 +25,23 @@ body {
     color: #E76F51;
     font-weight: 700;
 }
+
+#drink-diagram {
+    display: none;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 50px;
+    height: 80px;
+    border: 2px solid white;
+}
+
+.milk {
+    background-color: red;
+    height: 60px;
+}
+
+.espresso {
+    background-color: brown;
+    height: 16px;
+}
