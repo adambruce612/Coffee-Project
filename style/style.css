@@ -31,9 +31,9 @@ body {
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
+    border: 2px solid white;
     width: 50px;
     height: 80px;
-    border: 2px solid white;
 }
 
 .milk {
